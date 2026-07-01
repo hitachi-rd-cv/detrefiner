@@ -101,6 +101,14 @@ Please download them from the following Hugging Face directories and place them 
 - [`eval_results/`](https://huggingface.co/sokazaki/detrefiner/tree/main/eval_results)
 - [`trained_models/`](https://huggingface.co/sokazaki/detrefiner/tree/main/trained_models)
 
+To reproduce [`eval_results/`](https://huggingface.co/sokazaki/detrefiner/tree/main/eval_results), run the following evaluation scripts.
+```bash
+python evaluate_glipmodel.py --dataset coco --model-size tiny   # for GLIP
+python evaluate_hfmodels.py --dataset coco --model-name grounding-dino-tiny   # for Grounding-DINO/MM-Grounding-DINO/LLMDet
+```
+For GLIP, please set up the environment, configs, and checkpoints according to the official [`GLIP repository`](https://github.com/microsoft/GLIP).\
+For the other models, please download the corresponding checkpoints from the Hugging Face Model Hub and place them under `./data/huggingface/`.
+
 ### Generate Feature Files
 
 Before training or evaluation, generate ground-truth label/bounding-box files, text features, and visual features.
@@ -205,7 +213,7 @@ A typical project structure before running training or evaluation is:
 ```
 
 ## TODO
-The script for generating `eval_results/` and the Hugging Face demo will be released by the end of June. 
+The demo script will be released soon.\
 DetRefiner models trained on additional datasets (e.g., SA-Co Dataset) will be released later.
 
 ## Citation
