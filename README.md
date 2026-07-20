@@ -5,7 +5,15 @@ by [Soichiro Okazaki](https://scholar.google.com/citations?user=GIGC74IAAAAJ), T
 
 This repository contains code for training and evaluating **DetRefiner**, a detection-score refinement model based on image and text features extracted from [MobileCLIP](https://github.com/apple/ml-mobileclip) and [DINOv3](https://github.com/facebookresearch/dinov3).
 
-The code supports experiments on COCO, LVIS, and ODinW13 datasets.
+The training and evaluation code supports experiments on COCO, LVIS, and ODinW13.
+
+## Demo
+
+Run `demo_detrefiner.py` for online inference on custom images. The demo computes text features with MobileCLIP and visual features with DINOv3 at runtime.
+
+See [`README_demo.md`](README_demo.md) for setup and usage instructions.
+
+The following sections describe how to reproduce training and evaluation.
 
 ## Environment
 
@@ -174,9 +182,6 @@ dataset = "coco"
 To evaluate on LVIS or ODinW13, please edit the corresponding variables in the script (line 788).
 Result text files for each dataset are already available in the [`misc/`](https://huggingface.co/sokazaki/detrefiner/tree/main/misc).
 
-## Demo
-Run `demo_detrefiner.py` for real-time inference. See [`README_demo.md`](README_demo.md) for setup and usage instructions.
-
 ## Recommended File Structure
 
 A typical project structure before running training or evaluation is:
@@ -216,7 +221,7 @@ A typical project structure before running training or evaluation is:
 ```
 
 ## TODO
-Release a Hugging Face demo of a DetRefiner model trained on an additional dataset.
+- [ ] Release a Hugging Face demo of a DetRefiner model trained on an additional dataset.
 
 ## Citation
 ```
