@@ -174,6 +174,9 @@ dataset = "coco"
 To evaluate on LVIS or ODinW13, please edit the corresponding variables in the script (line 788).
 Result text files for each dataset are already available in the [`misc/`](https://huggingface.co/sokazaki/detrefiner/tree/main/misc).
 
+## Demo
+Run `demo_detrefiner.py` for real-time inference. See [`README_demo.md`](README_demo.md) for setup and usage instructions.
+
 ## Recommended File Structure
 
 A typical project structure before running training or evaluation is:
@@ -213,8 +216,7 @@ A typical project structure before running training or evaluation is:
 ```
 
 ## TODO
-The demo script will be released soon.\
-DetRefiner models trained on additional datasets (e.g., SA-Co Dataset) will be released later.
+Release a Hugging Face demo of a DetRefiner model trained on an additional dataset.
 
 ## Citation
 ```
